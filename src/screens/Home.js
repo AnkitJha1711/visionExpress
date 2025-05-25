@@ -34,7 +34,7 @@ export default function Home() {
       <section className="py-16 px-6">
         <h2 className="text-3xl font-bold text-center mb-10">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {services.map((s, i) => (
+          {/* {services.map((s, i) => (
             <motion.div
               key={i}
               whileHover={{ y: -5 }}
@@ -44,7 +44,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
               <p className="text-gray-600">{s.desc}</p>
             </motion.div>
-          ))}
+          ))} */}
         </div>
       </section>
 
@@ -63,7 +63,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-white mt-10">
         <h2 className="text-3xl font-bold text-center mb-10">Why Choose Us</h2>
         <div className="flex flex-wrap justify-center gap-10 text-center">
           <div>
