@@ -1,14 +1,24 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Footer from './Footer'
-
 import { motion } from "framer-motion";
 import { Truck, Plane, PackageCheck, Globe2 } from "lucide-react";
 
 export default function Home() {
+
+  const services = [
+    {
+      icon: <Truck className="text-blue-700" />,
+      title: "Delivery",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.",
+    },
+    {
+      icon: <Plane className="text-blue-700" />,
+      title: "Pickup",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.",
+    },
+  ];
+
   return (
     <div>
-        <Navbar/>
       <div>
          <div className="bg-gray-50 text-gray-900">
       {/* Hero Section */}
@@ -34,8 +44,8 @@ export default function Home() {
       <section className="py-16 px-6">
         <h2 className="text-3xl font-bold text-center mb-10">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {services.map((s, i) => (
-            <motion.div
+          {services?.map((s, i) => (
+            <motion.di
               key={i}
               whileHover={{ y: -5 }}
               className="bg-white p-6 rounded-2xl shadow-lg text-center"
@@ -43,7 +53,7 @@ export default function Home() {
               <div className="text-blue-700 text-3xl mb-4">{s.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
               <p className="text-gray-600">{s.desc}</p>
-            </motion.div>
+            </motion.di>
           ))}
         </div>
       </section>
@@ -87,7 +97,6 @@ export default function Home() {
       </footer>
     </div>
       </div>
-      <Footer/>
     </div>
   )
 }
