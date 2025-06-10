@@ -7,6 +7,11 @@ import Signup_carrier from './screens/Signup_carrier';
 import Signin from './screens/Signin';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Profile from './Profile/Profile';
+
+// ...
+
+
 
 
 function App() {
@@ -18,6 +23,7 @@ function App() {
       <Route path='/signup-shipper' element={<Signup_shipper/>}/>
       <Route path='/signup-carrier' element={<Signup_carrier/>}/>
       <Route path='/signin' element={<Signin/>}/>
+      <Route path="/profile" element={<Profile />} />
     </Routes>
     <Footer/>
   </BrowserRouter>

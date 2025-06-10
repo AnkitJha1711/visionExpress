@@ -1,0 +1,73 @@
+.profile-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  padding: 2rem 2.5rem;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f1c40f;
+}
+
+.profile-details {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.profile-shipment-btn {
+  background: linear-gradient(90deg, #6e45e2, #88d3ce);
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: background 0.2s;
+}
+.profile-shipment-btn:hover {
+  background: linear-gradient(90deg, #e74c3c, #f1c40f);
+  color: #23243a;
+}
+
+.profile-shipments-title {
+  margin-bottom: 1rem;
+}
+
+.profile-shipments-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f7f8fa;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.profile-shipments-table th, .profile-shipments-table td {
+  padding: 0.8rem;
+  text-align: left;
+}
+.profile-shipments-table th {
+  background: #f1c40f;
+  color: #23243a;
+}
+.profile-shipments-table tr:nth-child(even) {
+  background: #fff;
+}
+.profile-shipments-table td {
+  color: #444;
+}
