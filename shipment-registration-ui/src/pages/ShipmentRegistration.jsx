@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./ShipmentRegistration.css";
 
 const ShipmentRegistration = () => {
+
+  const [cargoType, setCargoType] = useState("");
+  const [customCargo, setCustomCargo] = useState("");
   
   return (
     <div className="shipment-container">
@@ -35,48 +38,58 @@ const ShipmentRegistration = () => {
 
           <div className="form-group">
             <label>Type of Cargo</label>
-            <select name="itemType" required>
-                  <option value="">Select cargo type</option>
-                  <option value="Perishable Goods">Perishable Goods</option>
-                  <option value="Electronics">Electronics</option>
-                  <option value="Furniture">Furniture</option>
-                  <option value="Automotive Parts">Automotive Parts</option>
-                  <option value="Pharmaceuticals">Pharmaceuticals</option>
-                  <option value="Textiles and Clothing">Textiles and Clothing</option>
-                  <option value="Construction Material">Construction Material</option>
-                  <option value="Heavy Machinery">Heavy Machinery</option>
-                  <option value="Chemicals">Chemicals (Non-Hazardous)</option>
-                  <option value="Documents & Parcels">Documents & Parcels</option>
-                  <option value="Others">Others</option>
+            <select
+              name="itemType"
+              required
+              value={cargoType}
+              onChange={(e) => setCargoType(e.target.value)}
+            >
+              <option value="">Material type</option>
+              <option value="Perishable Goods">Perishable Goods</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Furniture">Furniture</option>
+              <option value="Automotive Parts">Automotive Parts</option>
+              <option value="Pharmaceuticals">Pharmaceuticals</option>
+              <option value="Textiles and Clothing">Textiles and Clothing</option>
+              <option value="Construction Material">Construction Material</option>
+              <option value="Heavy Machinery">Heavy Machinery</option>
+              <option value="Chemicals">Chemicals (Non-Hazardous)</option>
+              <option value="Documents & Parcels">Documents & Parcels</option>
+              <option value="Others">Others</option>
             </select>
+            
+            {cargoType === "Others" && (
+              <input
+                type="text"
+                placeholder="Specify other material"
+                value={customCargo}
+                onChange={(e) => setCustomCargo(e.target.value)}
+                style={{ marginTop: "8px" }}
+              />
+            )}
           </div>
 
           <div className="form-group">
-            <label>Dimensions (in feet)</label>
+            <label>Dimensions</label>
             <div className="dimension-group">
-              <input type="number" placeholder="Length" />
-              <input type="number" placeholder="Width" />
-              <input type="number" placeholder="Height" />
+              <input type="number" placeholder="Length (in feet)" />
+              <input type="number" placeholder="Width (in feet)" />
+              <input type="number" placeholder="Height (in feet)" />
             </div>
           </div>
 
           <div className="form-group">
             <label>Weight</label>
             <div className="weight-group">
-              <input type="number" placeholder="Enter weight" />
-              <select>
-                <option>kg</option>
-                <option>ton</option>
-              </select>
+              <input type="number" placeholder="Enter weight (in Kg)" />
             </div>
           </div>
 
           <div className="form-group">
             <label>Urgency</label>
             <select>
-              <option>Low</option>
-              <option>Medium</option>
-              <option>High</option>
+              <option>True</option>
+              <option>False</option>
             </select>
           </div>
 
