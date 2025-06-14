@@ -1,0 +1,117 @@
+/* Layout */
+.shipment-container {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-icon {
+  color: #333;
+  text-decoration: none;
+}
+
+.org-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-button {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.logout {
+  color: #cc0000;
+}
+
+/* Form Wrapper */
+.form-wrapper {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Form */
+.shipment-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.dimension-group,
+.weight-group {
+  display: flex;
+  gap: 10px;
+}
+
+.dimension-group input {
+  flex: 1;
+}
+
+.weight-group input {
+  flex: 2;
+}
+
+.weight-group select {
+  flex: 1;
+}
+
+.submit-wrapper {
+  text-align: center;
+}
+
+.submit-wrapper button {
+  background-color: #0077cc;
+  color: white;
+  font-weight: bold;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-wrapper button:hover {
+  background-color: #005fa3;
+}
