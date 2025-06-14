@@ -1,0 +1,85 @@
+.shipment-table-wrapper {
+  padding: 20px;
+}
+
+.shipment-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.filter-bar select,
+.filter-bar input[type="text"] {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+
+.shipment-table-container {
+  overflow-x: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.shipment-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.shipment-table th,
+.shipment-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.shipment-table th {
+  background-color: #f2f4f8;
+  color: #34495e;
+  font-weight: 600;
+}
+
+.hoverable-row:hover {
+  background-color: #f9fafb;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accept-btn {
+  background-color: #27ae60;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.hold-btn {
+  background-color: #f39c12;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.accept-btn:hover {
+  background-color: #219150;
+}
+
+.hold-btn:hover {
+  background-color: #e08e0b;
+}
