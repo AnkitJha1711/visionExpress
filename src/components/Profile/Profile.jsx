@@ -2,12 +2,14 @@ import React from 'react';
 import './Profile.css';
 
 function Profile() {
+  const name= "Acme Logistics";
+
   return (
     <div className="profile-container">
       <div className="profile-header">
         <img className="profile-avatar" src="https://i.pravatar.cc/100" alt="Avatar" />
         <div>
-          <h2>Acme Logistics</h2>
+          <h2>{name}</h2>
           <p>GST No: 27AABCU9603R1Z2</p>
         </div>
       </div>
