@@ -1,7 +1,7 @@
 // Home.jsx
 import React, { useState } from 'react';
 import { Menu, X, Truck, Users, Shield, Clock, ArrowRight, Star, CheckCircle } from 'lucide-react';
-import './Home.css';
+import '../styles/Home.css';
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
