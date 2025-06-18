@@ -6,6 +6,7 @@ import Profile from './pages/Profile';
 import ShipmentRegistration from './pages/ShipmentRegistration';
 import SignupPage from './pages/SignupPage';
 import SigninPage from './pages/SigninPage';
+import TransporterProfile from './pages/TransporterProfile';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/shipmentregister' element={<ShipmentRegistration />} />
         <Route path='/signuppage' element={<SignupPage />} />
         <Route path='/signinpage' element={<SigninPage />} />
+        <Route path='/transport' element={<TransporterProfile />} />
 
         {/* Add more routes as needed */}
       </Routes>
