@@ -7,12 +7,14 @@ import ShipmentRegistration from './pages/ShipmentRegistration';
 import SignupPage from './pages/SignupPage';
 import SigninPage from './pages/SigninPage';
 import TransporterProfile from './pages/TransporterProfile';
+import Navbar from './components/Navbar'; 
 
 function App() {
   return (
     <BrowserRouter>
-      
+      <Navbar />
       <Routes>
+        
         <Route path='/' element={<Home />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/shipmentregister' element={<ShipmentRegistration />} />
