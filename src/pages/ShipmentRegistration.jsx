@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
 import "../styles/ShipmentRegistration.css";
 
 const ShipmentRegistration = () => {
 
   const [cargoType, setCargoType] = useState("");
   const [customCargo, setCustomCargo] = useState("");
+  const navigate = useNavigate(); 
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    navigate("/availabletransporters"); 
+  };
   
   return (
     <div className="shipment-container">
@@ -14,7 +20,7 @@ const ShipmentRegistration = () => {
       {/* Main Form */}
       <div className="form-wrapper">
         <h2 className="form-title">Shipper Company: ABC Logistics</h2>
-        <form className="shipment-form">
+        <form className="shipment-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Source</label>
             <input type="text" placeholder="Enter source" />
