@@ -1,114 +1,82 @@
-import React, { useState } from 'react';
-import { FaUserCircle, FaTruck, FaBell, FaBuilding, FaFileUpload, FaCogs, FaCheck } from 'react-icons/fa';
+import React from 'react';
 import '../styles/ShipperDashboard.css';
+import { FaUserCircle } from 'react-icons/fa';
+import { Link, useNavigate  } from "react-router-dom";
 
-const ShipperProfile = () => {
-  const [shipperType, setShipperType] = useState('Business');
-  const [location, setLocation] = useState('Delhi');
-  const [mode, setMode] = useState('Road');
-  const [weight, setWeight] = useState('500 kg - Standard');
 
-  const handleShipperTypeChange = (e) => {
-    setShipperType(e.target.value);
-    window.location.reload();
-  };
+const ShipperDashboard = () => {
+  const pastShipments = [
+    { id: 1, pickup: 'Mumbai', drop: 'Delhi', vehicle: 'Truck', status: 'In Transit' },
+    { id: 2, pickup: 'Chennai', drop: 'Bangalore', vehicle: 'Van', status: 'Delivered' },
+  ];
+  const navigate= useNavigate();
+
+  const handleShipment= ()=>{
+    navigate("/shipmentregister")
+  }
+
+  const handleShipperProfile= ()=>{
+    navigate("/shipperprofile")
+  }
 
   return (
-    <div className="shipper-profile">
-
-      <div className="card-container">
-        {/* Basic Info */}
-        <div className="card">
-          <h3><FaUserCircle /> Basic Info</h3>
-          <div className="basic-info">
-            <div className="profile-pic" />
-            <div className="info">
-              <p><strong>Full Name / Company Name:</strong> Pradeep Shippers</p>
-              <p><strong>Email:</strong> prodeep@example.com <FaCheck className="icon-status" /></p>
-              <p><strong>Phone Number:</strong> +91 9876543210 <FaCheck className="icon-status" /></p>
-              <p><strong>Address:</strong> 123 Logistics Lane, Delhi, India</p>
-            </div>
-          </div>
+    <div className="dashboard-container">
+      <nav className="navbar">
+        <div className="logo">LogiXjunction</div>
+        <div className="nav-links">
+          <a href="/">About</a>
+          <a href="/">Help</a>
+          <a href="/">Contact Us</a>
+          <button className="signin-btn">Sign In</button>
+          <button className="signup-btn">Sign Up</button>
         </div>
+      </nav>
 
-        {/* Business Details */}
-        <div className="card">
-          <h3><FaBuilding /> Business Details</h3>
-          <p><strong>Type of Shipper:</strong> 
-            <select value={shipperType} onChange={handleShipperTypeChange}>
-              <option>Business</option>
-              <option>Individual</option>
-              <option>Enterprise</option>
-            </select>
-          </p>
-          <p><strong>GST Number:</strong> 22AAAAA0000A1Z5</p>
-          <p><strong>PAN Number:</strong> AAAAA0000</p>
-        </div>
-
-        {/* Shipping Preferences */}
-        <div className="card">
-          <h3><FaTruck /> Shipping Preferences</h3>
-          <p><strong>Frequent Pickup Location(s):</strong> 
-            <select value={location} onChange={(e) => setLocation(e.target.value)}>
-              <option>Delhi</option>
-              <option>Mumbai</option>
-              <option>Bangalore</option>
-            </select>
-          </p>
-          <p><strong>Preferred Mode:</strong> 
-            <select value={mode} onChange={(e) => setMode(e.target.value)}>
-              <option>Road</option>
-              <option>Rail</option>
-              <option>Air</option>
-              <option>Sea</option>
-            </select>
-          </p>
-          <p><strong>Average Shipment Weight:</strong> 
-            <select value={weight} onChange={(e) => setWeight(e.target.value)}>
-              <option>500 kg - Standard</option>
-              <option>1000 kg - Heavy</option>
-              <option>200 kg - Light</option>
-            </select>
-          </p>
-        </div>
-
-        {/* Pickup Facilities */}
-        <div className="card">
-          <h3><FaCogs /> Pickup Facilities</h3>
-          <p><strong>Loading/Unloading Help:</strong> <FaCheck className="icon-status" /></p>
-          <p><strong>Availability of Forklift/Crane:</strong> <FaCheck className="icon-status disabled" /></p>
-          <p><strong>Operating Hours:</strong> 8:00 AM - 6:00 PM</p>
-          <p><strong>Weekly Off:</strong> Sunday</p>
-        </div>
-
-        {/* Notification Settings */}
-        <div className="card">
-          <h3><FaBell /> Notification Settings</h3>
-          <p><strong>Notify via:</strong> Email</p>
-          <p><strong>Daily Summary Report:</strong> <FaCheck className="icon-status" /></p>
-        </div>
-
-        {/* Transporter Preferences */}
-        <div className="card">
-          <h3><FaTruck /> Transporter Preferences</h3>
-          <p><strong>Preference:</strong> Fast Delivery</p>
-          <p><strong>Fast Delivery:</strong> 4.0+</p>
-        </div>
-
-        {/* Document Upload & KYC */}
-        <div className="card">
-          <h3><FaFileUpload /> Document Upload & KYC</h3>
-          <p><strong>KYC Verified:</strong> <FaCheck className="icon-status" /></p>
-          <p><strong>Last Updated On:</strong> April 24, 2024</p>
-          <div className="uploads">
-            <button>Upload ID Proof</button>
-            <button>Upload GST Certificate</button>
-            <button>Upload Authorization Letter</button>
+      <div className="profile-section">
+        <div className="avatar"><FaUserCircle size={80} /></div>
+        <div className="company-info">
+          <h2>Acme Logistics</h2>
+          <p className="gst">GST No: 27AABCU9603R1Z2</p>
+          <p>Delivery Types: Express, Bulk</p>
+          <p>Operating Cities: Mumbai, Delhi</p>
+          <p>Vehicles: 10</p>
+          <div className="action-buttons">
+            <button className="btn-primary" onClick={handleShipment}>Make New Shipment</button>
+            <br />
+            <button className="btn-secondary" onClick={handleShipperProfile}>View Profile</button>
           </div>
         </div>
       </div>
+
+      <div className="shipments-section">
+        <h3>My Shipments</h3>
+        <table className="shipment-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Pickup</th>
+              <th>Drop</th>
+              <th>Vehicle</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {pastShipments.map((shipment) => (
+              <tr key={shipment.id}>
+                <td>{shipment.id}</td>
+                <td>{shipment.pickup}</td>
+                <td>{shipment.drop}</td>
+                <td>{shipment.vehicle}</td>
+                <td>{shipment.status}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <footer className="footer">© 2025 Your Company Name. All rights reserved.</footer>
     </div>
   );
 };
 
-export default ShipperProfile;
+export default ShipperDashboard;
