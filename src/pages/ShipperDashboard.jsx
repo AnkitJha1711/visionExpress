@@ -15,13 +15,6 @@ const ShipperProfile = () => {
 
   return (
     <div className="shipper-profile">
-      <header className="navbar">
-        <h2 className="logo">logix<span>junction</span></h2>
-        <div className="nav-buttons">
-          <button className="nav-btn">Home</button>
-          <button className="nav-btn">Logout</button>
-        </div>
-      </header>
 
       <div className="card-container">
         {/* Basic Info */}

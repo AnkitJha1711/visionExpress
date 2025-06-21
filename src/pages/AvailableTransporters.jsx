@@ -132,18 +132,6 @@ import { FaUserCircle } from "react-icons/fa";
 const AvailableTransporters = () => {
   return (
     <div className="transporter-page">
-      {/* Navbar */}
-      <nav className="navbar">
-        <Link to="/shipper-profile" className="nav-icon">
-          <FaUserCircle size={28} />
-        </Link>
-        <h1 className="org-name">Vyapargati</h1>
-        <div className="nav-links">
-          <Link to="/home" className="nav-button">Home</Link>
-          <Link to="/logout" className="nav-button logout">Logout</Link>
-        </div>
-      </nav>
-
 
       <h1>Available Transporters Near You</h1>
       <div className="transporter-list">
