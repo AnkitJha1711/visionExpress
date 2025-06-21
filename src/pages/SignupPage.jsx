@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Truck, Package, ArrowRight, CheckCircle } from 'lucide-react';
 import '../styles/SignupPage.css';
+import { useNavigate } from 'react-router-dom';
 
 const SignupPage = () => {
   const [userType, setUserType] = useState('');
@@ -28,7 +29,7 @@ const SignupPage = () => {
       [name]: value
     }));
   };
-
+  const navigate = useNavigate();
   const handleVehicleTypeChange = (vehicleType) => {
     setFormData(prev => ({
       ...prev,
@@ -349,7 +350,9 @@ const SignupPage = () => {
 
             <button
               type="button"
-              onClick={handleSubmit}
+              onClick={(e)=>{handleSubmit(e);
+                navigate('/');
+              }}
               className={`submit-btn ${userType}-submit-btn`}
             >
               Create {userType === 'shipper' ? 'Shipper' : 'Carrier'} Account

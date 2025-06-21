@@ -1,7 +1,9 @@
 import React from 'react';
 import '../styles/Navbar.css'; 
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -14,7 +16,7 @@ const Navbar = () => {
                 <circle cx="22" cy="20" r="3" fill="white"/>
             </svg>
             </div>
-            <span className="company-name">LogiXjunction</span>
+            <span className="company-name" onClick={()=>{navigate('/')}}>LogiXjunction</span>
         </div>
 
         {/* Right Section: Links + Auth */}
@@ -26,8 +28,8 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-auth">
-            <button className="sign-in-btn">Sign In</button>
-            <button className="sign-up-btn">Sign Up</button>
+            <button className="sign-in-btn" onClick={()=>{navigate('/signinpage')}}>Sign In</button>
+            <button className="sign-up-btn" onClick={()=>{navigate('/signuppage')}}>Sign Up</button>
             </div>
         </div>
         </div>

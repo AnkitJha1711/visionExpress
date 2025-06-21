@@ -1,5 +1,6 @@
 // Home.jsx
 import React, { useState } from 'react';
+
 import { Menu, X, Truck, Users, Shield, Clock, ArrowRight, Star, CheckCircle } from 'lucide-react';
 import '../styles/Home.css';
 

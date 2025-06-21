@@ -1,8 +1,10 @@
 import React from 'react';
-import '../styles/Profile.css';
+import '../styles/Profilecarrier.css';
+import { useNavigate } from 'react-router-dom';
 
 function Profile() {
   const name= "Acme Logistics";
+  const navigate = useNavigate();
 
   return (
     <div className="profile-container">
@@ -25,6 +27,7 @@ function Profile() {
         </div>
       </div>
       <button className="profile-shipment-btn">Get New Shipment</button>
+      <button className="profile-shipment-btn" onClick={()=>{navigate('/transport')}}>Edit Profile</button>
       <h3 className="profile-shipments-title">My Shipments</h3>
       <table className="profile-shipments-table">
         <thead>

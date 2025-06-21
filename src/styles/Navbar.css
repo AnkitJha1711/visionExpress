@@ -39,6 +39,7 @@
   color: #4F46E5;
   text-decoration: none;
   letter-spacing: -0.025em;
+  cursor: pointer;
 }
 
 /* Right side container (Links + Auth buttons) */

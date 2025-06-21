@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Truck, Package, Eye, EyeOff, Mail, Lock } from 'lucide-react';
 import '../styles/SigninPage.css'; 
 
@@ -10,6 +11,7 @@ const SigninPage = () => {
     password: '',
     rememberMe: false
   });
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -196,7 +198,15 @@ const SigninPage = () => {
 
             <button
               type="button"
-              onClick={handleSubmit}
+              onClick={(e) => {
+                handleSubmit(e);
+                if (userType === 'shipper') {
+                  navigate('/shipper/profile');
+                } else if (userType === 'carrier') {
+                  navigate('/profilecarrier');
+                }
+              }}
+
               className={`submit-btn ${userType}-submit-btn`}
             >
               Sign In
