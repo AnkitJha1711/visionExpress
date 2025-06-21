@@ -17,7 +17,7 @@ const ShipperProfile = () => {
       </nav>
 
       <div className="profile-container">
-        <h2>Shipper Profile</h2>
+        <h2>Shipper-Profile</h2>
 
         <section className="section">
           <h3>Basic Info & Business Details</h3>
