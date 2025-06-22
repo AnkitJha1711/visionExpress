@@ -61,11 +61,6 @@ const TransporterProfile = () => {
 
   return (
     <div className="transporter-profile">
-      <div className="profile-header">
-        <h1>Transporter Profile</h1>
-        <div className="profile-brand">logixjunction</div>
-      </div>
-
       <div className="profile-content">
         {/* Basic Info Section */}
         <div className="profile-section">
