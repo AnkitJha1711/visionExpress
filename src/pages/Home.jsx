@@ -1,7 +1,8 @@
 // Home.jsx
 import React, { useState } from 'react';
+
 import { Menu, X, Truck, Users, Shield, Clock, ArrowRight, Star, CheckCircle } from 'lucide-react';
-import './Home.css';
+import '../styles/Home.css';
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,49 +43,6 @@ const Home = () => {
 
   return (
     <div className="homepage">
-      {/* Navbar */}
-      <nav className="navbar">
-        <div className="navbar-container">
-          <div className="navbar-content">
-            {/* Logo */}
-            <div className="logo-container">
-              <div className="logo-icon">
-                <Truck className="logo-truck" />
-              </div>
-              <span className="logo-text">DeliveryPro</span>
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="nav-desktop">
-              <a href="#about" className="nav-link">About</a>
-              <a href="#help" className="nav-link">Help</a>
-              <a href="#contact" className="nav-link">Contact Us</a>
-              <a href="#signin" className="nav-signin">Sign In</a>
-              <a href="#signup" className="nav-signup">Sign Up</a>
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="nav-mobile-btn">
-              <button onClick={toggleMenu} className="menu-toggle">
-                {isMenuOpen ? <X className="menu-icon" /> : <Menu className="menu-icon" />}
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="nav-mobile">
-              <div className="nav-mobile-links">
-                <a href="#about" className="nav-mobile-link">About</a>
-                <a href="#help" className="nav-mobile-link">Help</a>
-                <a href="#contact" className="nav-mobile-link">Contact Us</a>
-                <a href="#signin" className="nav-mobile-signin">Sign In</a>
-                <a href="#signup" className="nav-mobile-signup">Sign Up</a>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <section className="hero-section">
