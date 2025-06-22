@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Footer from './components/Footer';
@@ -8,6 +8,12 @@ import SignupPage from './pages/SignupPage';
 import SigninPage from './pages/SigninPage';
 import TransporterProfile from './pages/TransporterProfile';
 import Navbar from './components/Navbar'; 
+import AvailableTransporters from './pages/AvailableTransporters';
+import ShipperDashboard from './pages/ShipperDashboard';
+import ListedShipments from './pages/ListedShipments';
+import ShipperProfile from './pages/ShipperProfile';
+
+
 
 function App() {
   return (
@@ -18,11 +24,6 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/profilecarrier' element={<Profilecarrier />} />
         <Route path='/shipmentregister' element={<ShipmentRegistration />} />
-        <Route path='/signuppage' element={<SignupPage />} />
-        <Route path='/signinpage' element={<SigninPage />} />
-        <Route path='/transport' element={<TransporterProfile />} />
-
-        {/* Add more routes as needed */}
       </Routes>
       <Footer />
     </BrowserRouter>
