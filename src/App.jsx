@@ -23,6 +23,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />    
         <Route path='/profilecarrier' element={<Profilecarrier />} />
+        <Route path='/profile' element={<Profile />} />
         <Route path='/shipmentregister' element={<ShipmentRegistration />} />
         <Route path='/availabletransporters' element={<AvailableTransporters />} />
         <Route path='/transport' element={<TransporterProfile />} />

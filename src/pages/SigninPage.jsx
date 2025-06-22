@@ -201,7 +201,7 @@ const SigninPage = () => {
               onClick={(e) => {
                 handleSubmit(e);
                 if (userType === 'shipper') {
-                  navigate('/shipper/profile');
+                  navigate('/shipperprofile');
                 } else if (userType === 'carrier') {
                   navigate('/profilecarrier');
                 }

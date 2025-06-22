@@ -171,55 +171,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-grid">
-            <div className="footer-brand">
-              <div className="footer-logo">
-                <div className="footer-logo-icon">
-                  <Truck className="footer-truck" />
-                </div>
-                <span className="footer-logo-text">DeliveryPro</span>
-              </div>
-              <p className="footer-description">
-                India's leading B2B delivery platform connecting businesses across the nation.
-              </p>
-            </div>
-            
-            <div className="footer-column">
-              <h3 className="footer-heading">Company</h3>
-              <div className="footer-links">
-                <a href="#" className="footer-link">About Us</a>
-                <a href="#" className="footer-link">Careers</a>
-                <a href="#" className="footer-link">Press</a>
-              </div>
-            </div>
-            
-            <div className="footer-column">
-              <h3 className="footer-heading">Support</h3>
-              <div className="footer-links">
-                <a href="#" className="footer-link">Help Center</a>
-                <a href="#" className="footer-link">Contact Us</a>
-                <a href="#" className="footer-link">API Docs</a>
-              </div>
-            </div>
-            
-            <div className="footer-column">
-              <h3 className="footer-heading">Legal</h3>
-              <div className="footer-links">
-                <a href="#" className="footer-link">Privacy Policy</a>
-                <a href="#" className="footer-link">Terms of Service</a>
-                <a href="#" className="footer-link">Cookie Policy</a>
-              </div>
-            </div>
-          </div>
-          
-          <div className="footer-bottom">
-            <p>&copy; 2025 DeliveryPro. All rights reserved. Made in India 🇮🇳</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

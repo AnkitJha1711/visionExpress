@@ -5,16 +5,6 @@ import { FaUserCircle, FaCheckCircle, FaUpload } from 'react-icons/fa';
 const ShipperProfile = () => {
   return (
     <div className="profile-page">
-      <nav className="navbar">
-        <div className="logo">LogiXjunction</div>
-        <div className="nav-links">
-          <a href="/">About</a>
-          <a href="/">Help</a>
-          <a href="/">Contact Us</a>
-          <button className="btn-signin">Sign In</button>
-          <button className="btn-signup">Sign Up</button>
-        </div>
-      </nav>
 
       <div className="profile-container">
         <h2>Shipper-Profile</h2>
